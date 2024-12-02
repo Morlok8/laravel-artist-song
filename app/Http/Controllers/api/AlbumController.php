@@ -28,7 +28,7 @@ class AlbumController extends Controller
     /**
      * @OA\Post(
      *     path="/album",
-     *     summary="Добавляет альбом",
+     *     summary="Добавляет альбом. Данные передаются в body запроса в формате {'artist_id': id испольнителя, "release_year": год выпуска}",
      *     tags={"Albums"},
      *     @OA\Response(response=201, description="Album added"),
      *     
