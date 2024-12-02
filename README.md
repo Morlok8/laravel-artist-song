@@ -8,4 +8,5 @@
  <li>Выполнить команду php artisan key:generate;</li>
  <li>Заполним таблицы исполнителей и песен тестовыми данными. Для этого выполним команду php artisan db:seed --class=ArtistsSeeder и php artisan db:seed --class=SongsSeeder;</li>
  <li>Выполнив все эти действия, запустить сервер, используя команду php artisan serve;</li>
+ <li>Для создания swagger документации, выполним команду php artisan l5-swagger:generate - результат будет открываться по ваш_домен(localhost или другой)/api/documentation</li>
 </ol>
