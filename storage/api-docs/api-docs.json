@@ -1,0 +1,307 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Artists and Songs API",
+        "version": "0.1"
+    },
+    "paths": {
+        "/projects": {
+            "get": {
+                "operationId": "e3dfa947954e394a726a0d4795bc03f2",
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of projects."
+                    }
+                }
+            }
+        },
+        "/album": {
+            "get": {
+                "tags": [
+                    "Albums"
+                ],
+                "summary": "Получант список альбомов",
+                "operationId": "eaeb3145643f143e83a7dda87dbfb7a5",
+                "responses": {
+                    "200": {
+                        "description": "List of songs"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Albums"
+                ],
+                "summary": "Добавляет альбом",
+                "operationId": "fce76937e69409173bffb6160044caa8",
+                "responses": {
+                    "201": {
+                        "description": "Album added"
+                    }
+                }
+            }
+        },
+        "/album/{id}": {
+            "get": {
+                "tags": [
+                    "Albums"
+                ],
+                "summary": "Получает альбом по id",
+                "operationId": "770af244db23405a2854d0b5b0eeed67",
+                "responses": {
+                    "201": {
+                        "description": "Shows an album"
+                    },
+                    "404": {
+                        "description": "Album not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Albums"
+                ],
+                "summary": "Обновляет альбом по id",
+                "operationId": "b83bf72c963551997d44fc4cad79bde7",
+                "responses": {
+                    "201": {
+                        "description": "Shows an album"
+                    },
+                    "404": {
+                        "description": "Album not found"
+                    }
+                }
+            }
+        },
+        "/album/{id}/songs": {
+            "get": {
+                "tags": [
+                    "Albums"
+                ],
+                "summary": "Получает список песен в альбоме по id",
+                "operationId": "82af917506fe665c8a9308ac77bf414b",
+                "responses": {
+                    "201": {
+                        "description": "Shows a list of songs for an album"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Albums"
+                ],
+                "summary": "Добавляет песню в альбом по id альбома (id песни передается в body запроса в виде {'song_id': id-песни}))",
+                "operationId": "9fd9065c8b5e1a3ac55f9c3959d11228",
+                "responses": {
+                    "201": {
+                        "description": "Song is added succesuflly"
+                    },
+                    "404": {
+                        "description": "Error"
+                    },
+                    "403": {
+                        "description": "Song doesn't exist, try another one"
+                    }
+                }
+            }
+        },
+        "/album/{id}/song/{id}": {
+            "delete": {
+                "tags": [
+                    "Albums"
+                ],
+                "summary": "Удаляет песню из альбома по id",
+                "operationId": "a0e45b7e935b7c848744042eb361c826",
+                "responses": {
+                    "201": {
+                        "description": "Song succesully deleted from the album"
+                    },
+                    "404": {
+                        "description": "Song doesn't exist in this album"
+                    }
+                }
+            }
+        },
+        "/album/{id}/": {
+            "delete": {
+                "tags": [
+                    "Albums"
+                ],
+                "summary": "Удаляет альбом по id",
+                "operationId": "4442e311c2b061e4c3b2701f24994f1f",
+                "responses": {
+                    "201": {
+                        "description": "Album deleted"
+                    },
+                    "404": {
+                        "description": "Album not found"
+                    }
+                }
+            }
+        },
+        "/artists": {
+            "get": {
+                "tags": [
+                    "Artists"
+                ],
+                "summary": "Получает список исполнителей",
+                "operationId": "724ef4eb070d756259ac3eee0d1f7d3e",
+                "responses": {
+                    "200": {
+                        "description": "List of artists"
+                    }
+                }
+            }
+        },
+        "/artist": {
+            "post": {
+                "tags": [
+                    "Artists"
+                ],
+                "summary": "Добавляет исполнителя",
+                "operationId": "2d14c1a4f0d110b83d4d57a3da079e48",
+                "responses": {
+                    "201": {
+                        "description": "Artist added"
+                    }
+                }
+            }
+        },
+        "/artist/{id}": {
+            "get": {
+                "tags": [
+                    "Artists"
+                ],
+                "summary": "Получает исполнителя по id",
+                "operationId": "c11de3b097c0c4b23b6d962fb7e2d6d0",
+                "responses": {
+                    "201": {
+                        "description": "Returns an artist"
+                    },
+                    "400": {
+                        "description": "Artist not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Artists"
+                ],
+                "summary": "Обновляет данные исполнителя по id",
+                "operationId": "38c97d788a676e998391982f530441d9",
+                "responses": {
+                    "201": {
+                        "description": "Artist updated"
+                    },
+                    "404": {
+                        "description": "Artist not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Artists"
+                ],
+                "summary": "Удаялет данные исполнителя по id",
+                "operationId": "7fde4c34bcc1b6a03e16445a977ef5ca",
+                "responses": {
+                    "201": {
+                        "description": "Artist deleted"
+                    },
+                    "404": {
+                        "description": "Artist not found"
+                    }
+                }
+            }
+        },
+        "/songs": {
+            "get": {
+                "tags": [
+                    "Songs"
+                ],
+                "summary": "Получает список песен",
+                "operationId": "86c7dee841e626e3cc78ac7d7f789f16",
+                "responses": {
+                    "200": {
+                        "description": "List of songs"
+                    }
+                }
+            }
+        },
+        "/song": {
+            "post": {
+                "tags": [
+                    "Songs"
+                ],
+                "summary": "Добавляет песню",
+                "operationId": "5ce5955526140306643540b8ea6511bb",
+                "responses": {
+                    "201": {
+                        "description": "Song added"
+                    }
+                }
+            }
+        },
+        "/song/{id}": {
+            "get": {
+                "tags": [
+                    "Songs"
+                ],
+                "summary": "Получает песню по id",
+                "operationId": "bdde2cc73a348ee63c078740f04531a3",
+                "responses": {
+                    "201": {
+                        "description": "Returns a song"
+                    },
+                    "400": {
+                        "description": "Song not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Songs"
+                ],
+                "summary": "Обновляет песню по id",
+                "operationId": "7bc04082ae073dbd0f7239f3ab919330",
+                "responses": {
+                    "201": {
+                        "description": "Song updated"
+                    },
+                    "404": {
+                        "description": "Song not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Songs"
+                ],
+                "summary": "Удаляет песню по id",
+                "operationId": "e8c4121e9a197774dc83ce444847e06c",
+                "responses": {
+                    "201": {
+                        "description": "Song deleted"
+                    },
+                    "404": {
+                        "description": "Song not found"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Albums",
+            "description": "Albums"
+        },
+        {
+            "name": "Artists",
+            "description": "Artists"
+        },
+        {
+            "name": "Songs",
+            "description": "Songs"
+        }
+    ]
+}
