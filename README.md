@@ -6,7 +6,6 @@
  <li>Выполнить команду composer install;</li>
  <li>Выполнить команду php artisan migrate;</li>
  <li>Выполнить команду php artisan key:generate;</li>
- <li>Заполним таблицу лидов тестовыми данными. Для этого выполним команду php artisan db:seed --class=LeadsSeeder;</li>
- <li>Затем необходимо выполнить команду php artisan db:seed --class=LeadsSeeder;</li>
+ <li>Заполним таблицы исполнителей и песен тестовыми данными. Для этого выполним команду php artisan db:seed --class=ArtistsSeeder и php artisan db:seed --class=SongsSeeder;</li>
  <li>Выполнив все эти действия, запустить сервер, используя команду php artisan serve;</li>
 </ol>
